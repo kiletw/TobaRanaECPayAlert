@@ -8,7 +8,8 @@ const EXCHANGE_RATE = 15
       header: 'rgba(255,255,255,1)',
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
-      content: 'rgba(255,255,255,1)'
+      content: 'rgba(255,255,255,1)',
+      iconImg: 'https://cdn.discordapp.com/emojis/828907965951508480.png'
     },
     pinTime: 60
   },
@@ -20,7 +21,8 @@ const EXCHANGE_RATE = 15
       header: 'rgba(255,255,255,1)',
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
-      content: 'rgba(255,255,255,1)'
+      content: 'rgba(255,255,255,1)',
+      iconImg: 'https://cdn.discordapp.com/emojis/806046341846401024.png'
     },
     pinTime: 30
   },
@@ -32,7 +34,8 @@ const EXCHANGE_RATE = 15
       header: 'rgba(255,255,255,0.87451)',
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
-      content: 'rgba(255,255,255,0.87451)'
+      content: 'rgba(255,255,255,0.87451)',
+      iconImg: 'https://cdn.discordapp.com/emojis/806074765881770005.png'
     },
     pinTime: 10
   },
@@ -44,7 +47,8 @@ const EXCHANGE_RATE = 15
       header: 'rgba(0,0,0,0.87451)',
       authorName: 'rgba(0,0,0,0.541176)',
       time: 'rgba(0,0,0,0.501961)',
-      content: 'rgba(0,0,0,0.87451)'
+      content: 'rgba(0,0,0,0.87451)',
+      iconImg: 'https://cdn.discordapp.com/emojis/805591240921972758.png'
     },
     pinTime: 5
   },
@@ -56,7 +60,8 @@ const EXCHANGE_RATE = 15
       header: 'rgba(0,0,0,1)',
       authorName: 'rgba(0,0,0,0.541176)',
       time: 'rgba(0,0,0,0.501961)',
-      content: 'rgba(0,0,0,1)'
+      content: 'rgba(0,0,0,1)',
+      iconImg: 'https://cdn.discordapp.com/emojis/805623841052295168.png'
     },
     pinTime: 2
   },
@@ -68,7 +73,8 @@ const EXCHANGE_RATE = 15
       header: 'rgba(0,0,0,1)',
       authorName: 'rgba(0,0,0,0.701961)',
       time: 'rgba(0,0,0,0.501961)',
-      content: 'rgba(0,0,0,1)'
+      content: 'rgba(0,0,0,1)',
+      iconImg: 'https://cdn.discordapp.com/emojis/805591703879680001.png'
     },
     pinTime: 0
   },
@@ -80,7 +86,8 @@ const EXCHANGE_RATE = 15
       header: 'rgba(255,255,255,1)',
       authorName: 'rgba(255,255,255,0.701961)',
       time: 'rgba(255,255,255,0.501961)',
-      content: 'rgba(255,255,255,1)'
+      content: 'rgba(255,255,255,1)',
+      iconImg: 'https://cdn.discordapp.com/emojis/805591672171790336.png'
     },
     pinTime: 0
   }
