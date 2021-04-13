@@ -118,9 +118,21 @@
     });
 
     function checkDonate() {
+        let urlParams = new URLSearchParams(window.location.search);
+        var method = '';
+        var url = ''
+        if(urlParams.has('debug') == 1){
+            method = 'GET';
+            url = 'test.json';
+        }else{
+            method = 'POST';
+            url = 'https://tobarana-proxy.herokuapp.com/https://payment.ecpay.com.tw/Broadcaster/CheckDonate/DA0DDBDB963DAAB9E74D7E784774CC7F';
+        }
+
+
         $.ajax({
-            type: "POST",
-            url: "https://tobarana-proxy.herokuapp.com/https://payment.ecpay.com.tw/Broadcaster/CheckDonate/DA0DDBDB963DAAB9E74D7E784774CC7F",
+            type: method,
+            url: url,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             cache: false,
