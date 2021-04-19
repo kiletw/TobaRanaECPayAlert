@@ -121,10 +121,10 @@
         let urlParams = new URLSearchParams(window.location.search);
         var method = '';
         var url = ''
-        if(urlParams.has('debug') == 1){
+        if (urlParams.has('debug') == 1) {
             method = 'GET';
             url = 'test.json';
-        }else{
+        } else {
             method = 'POST';
             url = 'https://tobarana-proxy.herokuapp.com/https://payment.ecpay.com.tw/Broadcaster/CheckDonate/DA0DDBDB963DAAB9E74D7E784774CC7F';
         }
@@ -175,6 +175,14 @@
                     }
                 }
                 setTimeout(checkDonate, checkDonateInterval);
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+                if (textStatus == 'timeout') {
+                    setTimeout(checkDonate, checkDonateInterval);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus) {
+                setTimeout(checkDonate, checkDonateInterval);
             }
         });
     }
@@ -214,7 +222,7 @@
 
         let colorConfig = getPriceConfig(amount);
 
-        
+
         let colorStyle =
             ' --yt-live-chat-paid-message-primary-color:' + colorConfig.colors.contentBg +
             '; --yt-live-chat-paid-message-secondary-color:' + colorConfig.colors.headerBg +
@@ -224,13 +232,13 @@
             '; --yt-live-chat-paid-message-color:' + colorConfig.colors.content;
         renderer.style = colorStyle;
         renderer.dataset["donateId"] = donateId;
-        if(amount >= 1500){
-            flash.style = flashStyle;       
-        }else{
-            flash.style = null;     
+        if (amount >= 1500) {
+            flash.style = flashStyle;
+        } else {
+            flash.style = null;
         }
 
-       
+
 
         let photoStyle =
             'background-image: url(' + colorConfig.colors.iconImg + ');' +
@@ -240,14 +248,11 @@
         var ecpay_table = document.querySelector('#ecpay_table');
         var clone = document.importNode(yt.content, true);
 
-        if(ecpay_table.childNodes.length==0){
+        if (ecpay_table.childNodes.length == 0) {
             ecpay_table.appendChild(clone);
-        }else{
-            ecpay_table.insertBefore(clone,ecpay_table.childNodes[0])
+        } else {
+            ecpay_table.insertBefore(clone, ecpay_table.childNodes[0])
         }
-        
-      
-
         queue.shift();
         setTimeout(doAlert, 500);
     }
@@ -288,4 +293,3 @@
         </yt-live-chat-paid-message-renderer>
     </div>
 </template>
-
