@@ -97,7 +97,7 @@
         }
 
         if (settings.AlertSound.length == 0) {
-            setTimeout(checkDonate, 1500);
+            setTimeout(checkDonate, 1000);
             setTimeout(doAlert, 2000);
         } else {
             soundManager.setup({
@@ -108,7 +108,7 @@
                             volume: settings.AlertSoundVolume
                         });
                     }
-                    setTimeout(checkDonate, 1500);
+                    setTimeout(checkDonate, 1000);
                     setTimeout(doAlert, 1000);
                 }
             });
@@ -183,7 +183,8 @@
             },
             error: function (XMLHttpRequest, textStatus) {
                 setTimeout(checkDonate, checkDonateInterval);
-            }
+            },
+            timeout:3000
         });
     }
 
